@@ -43,6 +43,11 @@ keep contactid18char collegefutureshsweightedgpa collegeuniversityattendingaccou
 save "bp_finaid_forreview", replace
 
 ********************************************************************************
+/* JL Notes:
+1. Do you still check aidsourceother even if they have an aidsource listed to see what's in the field? It may be useful to know. 
+2. Do you look at aidamountawarded to identify what the descrepancies are - if any - between the two fields?
+*/
+
 //This tabulation is meant to check that there are not values in Aid Source Other that should be listed as an Aid Source
 
 tab aidsourceother if missing(aidsource)
@@ -54,6 +59,12 @@ count if aidsource=="Community Foundation Scholarship" & missing(aidamountaccept
 
 
 ********************************************************************************
+/* JL Notes:
+
+
+*/
+
+
 //Cal Grant - check to see who is eligible and who had one listed or not
 
 // Standardize all forms of Cal Grants into a single value
