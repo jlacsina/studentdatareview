@@ -24,6 +24,17 @@ cd "N:\New - Raw Data\Student Data (Grantee Reported)\2016 Data\Beyond 12 Report
 save "firstgrad_forreview", replace
 
 // The first set of tabulations will be manually viewed for accuracy and to copy into the Review Workbook
+/* JL Notes:
+1. Are you looking for CBB reporting grantees?
+2. Are you looking for any non-scholars?
+3. Is the total aid amount accepted for all scholars (i.e. 18 scholars so 18 individual awards)? Is it important to distinguish when it's not the case? I think you do this later when you call out aidaccepted being missing...?
+4. In your review reports, are you listing hte total number of students reported? I do see you list total types of scholarships. 
+5. when you review DOB, is it correct that B12 has a validation to prevent incorrect day v months? it looks like you are just checking for year righ
+6. I remember the race/ethnicity field being pretty dirty. are you reviewing for this/checking in with Arielle as to how to clean it if needed?
+7. I don't see a review of high school names here - is it in a different file?
+8. Are you looking for PSI names? i.e. looking for PSIs wiht "unknown" listed or weird values? Same for high schools?
+9. 
+*/
 
 * How many scholars are included?
 distinct contactid18char if aidsource=="College Futures Scholarship"
